@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+
+  .sidebar {
+    // width: 200px;
+    height: 100vh;
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    border-right: 0.5px solid rgb(190, 190, 190);
+    position: fixed;
+    flex: 1;
+    transition: all 0.2s;
+
+    .top-section {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-right: 5px;
+
+      .logo {
+        cursor: pointer;
+      }
+
+      .bars {
+        margin-top: 17px;
+        cursor: pointer;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 100px 0px 50px 0px;
+
+      .link {
+        padding: 10px;
+        display: flex;
+        color: #282828;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        transition: all 0.1s;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+          background-color: #eb7f25;
+        }
+      }
+
+      .active {
+        color: white;
+        background-color: #eb7f25;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        color: white;
+        background-color: #eb7f25;
+        width: 130px;
+        height: 40px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  } // end of sidebar
+
+  main {
+    flex: 5;
+    width: 100vw;
+    height: 100vh;
+    background: #cacaca;
+
+    .navbar {
+      height: 60px;
+      width: 100%;
+      border-bottom: 0.1px solid #b9b9b9;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        color: #204866;
+        font-family: DM Serif Display;
+        font-size: 35px;
+        margin-left: 30px;
+
+        @media (max-width: '700px') {
+          font-size: 25px;
+        }
+      }
+
+      .advance {
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .search {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0px;
+
+          input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            border: 1px solid #b9b9b9;
+            border-radius: 50px 0px 0px 50px;
+
+            @media (max-width: '700px') {
+              padding: 4px;
+              width: 70px;
+            }
+          }
+          button {
+            border: 1px solid #b9b9b9;
+            border-radius: 0px 30px 30px 0px;
+            display: flex;
+            align-items: center;
+            width: 33px;
+            justify-content: center;
+            height: 33px;
+            cursor: pointer;
+
+            @media (max-width: '700px') {
+              height: 25px;
+            }
+          }
+        }
+
+        .setting{
+          cursor: pointer;
+          color: black;
+          margin-top: 6px;
+        }
+      }
+    }
+  } // end of main
+} // end of container
