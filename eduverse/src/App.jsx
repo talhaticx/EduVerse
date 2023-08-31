@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import NavbarWrapper from "./components/navbarwrapper";
 import Sidebar from "./pages/global/sidebar";
+
 import Error from "./pages/error";
+import Assignment from "./pages/assingment";
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
           <Route path="/list" element={<h1>List</h1>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/settings" element={<h1>Settings</h1>} />
+          <Route path="/assignment" element={<Assignment/>} />
           <Route path="*" element={<Error/>} />
         </Routes>
         </Sidebar>

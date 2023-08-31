@@ -13,6 +13,7 @@ const NavbarWrapper = () => {
     "/product": "Product",
     "/list": "Product List",
     "/settings" : "Settings", 
+    "/assignment" : "Assignment"
     // Add more routes and names as needed
   };
   

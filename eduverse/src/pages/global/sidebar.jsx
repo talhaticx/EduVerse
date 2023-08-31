@@ -57,7 +57,7 @@ const Sidebar = ({ children }) => {
   ];
 
   return (
-    <div className="container">
+    <div className="container-sidebar">
       {location.pathname !== "/login" && ( // Check if the current path is not "/login"
         <div
           style={{ width: collapsed ? "200px" : "50px" }}
