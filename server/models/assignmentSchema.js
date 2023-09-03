@@ -14,6 +14,10 @@ const assignmentSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    selectedClass: {
+        type: String,
+        required: true,
+    },
 });
 
 // Create a model based on the schema

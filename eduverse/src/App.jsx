@@ -5,9 +5,9 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import NavbarWrapper from "./components/navbarwrapper";
 import Sidebar from "./pages/global/sidebar";
-
 import Error from "./pages/error";
-import Assignment from "./pages/assingment";
+import Assignment from "./pages/assignment";
+import AssignmentCreate from "./pages/assignment/assignment-create";
 
 function App() {
   return (
@@ -16,14 +16,15 @@ function App() {
         <NavbarWrapper />
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/assignment" element={<Assignment/>} />
+          <Route path="/assignment/create" element={<AssignmentCreate/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/about" element={<h1>About</h1>} />
           <Route path="/analytics" element={<h1>Analytics </h1>} />
           <Route path="/comment" element={<h1>Comment </h1>} />
           <Route path="/product" element={<h1>Product</h1>} />
           <Route path="/list" element={<h1>List</h1>} />
-          <Route path="/login" element={<Login/>} />
           <Route path="/settings" element={<h1>Settings</h1>} />
-          <Route path="/assignment" element={<Assignment/>} />
           <Route path="*" element={<Error/>} />
         </Routes>
         </Sidebar>
@@ -31,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 

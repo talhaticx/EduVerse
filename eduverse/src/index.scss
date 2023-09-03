@@ -89,7 +89,8 @@
     width: 100vw;
     height: 100vh;
     background: #cacaca;
-
+    transition: all 0.3s;
+    
     .navbar {
       height: 60px;
       width: 100%;
@@ -99,14 +100,21 @@
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: '580px') {
+        justify-content: right;
+      }
+
       h1 {
         color: #204866;
         font-family: DM Serif Display;
         font-size: 35px;
         margin-left: 30px;
 
-        @media (max-width: '700px') {
+        @media (max-width: '780px') {
           font-size: 25px;
+        }
+        @media (max-width: '580px') {
+          display: none;
         }
       }
 
@@ -167,6 +175,29 @@
           color: black;
         }
       }
-    }
+    } // end of navbar
+
+    overflow-y: scroll;
   } // end of main
 } // end of container
+
+
+// custom bootstrap classes
+
+.btn{
+  transition: all 0.3s;
+
+}
+
+.btn-primary{
+  background-color: #eb7f25;
+  border:  #eb7f25;
+  border-radius: 0;
+
+  &:hover{
+    background-color: #eb7f25;
+    border-radius: 160px;
+  }
+
+  
+}

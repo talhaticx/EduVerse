@@ -13,7 +13,9 @@ const NavbarWrapper = () => {
     "/product": "Product",
     "/list": "Product List",
     "/settings" : "Settings", 
-    "/assignment" : "Assignment"
+    "/assignment" : "Assignment",
+    "/assignment/" : "Assignment",
+    "/assignment/create" : "Create Assignment",
     // Add more routes and names as needed
   };
   
@@ -21,7 +23,7 @@ const NavbarWrapper = () => {
     return null; // Don't render Navbar on the login page
   }
 
-  return <Navbar activePage={pageNames[location.pathname] || "404 Not Found"} />;
+  return <Navbar activePage={pageNames[location.pathname] || ""} />;
 };
 
 export default NavbarWrapper;
